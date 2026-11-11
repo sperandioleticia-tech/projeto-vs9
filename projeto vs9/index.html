@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Game Code - Aula 12: Sons e Efeitos</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+          href="https://pyscript.net/releases/2025.5.1/core.css">
+
+    <script type="module"
+            src="https://pyscript.net/releases/2025.5.1/core.js"></script>
+</head>
+
+<body>
+    <main class="container">
+        <header class="cabecalho">
+            <p class="etiqueta">MISSÃO ESPACIAL</p>
+            <h1>🚀 Game Code</h1>
+            <h2>Aula 12 — Sons e Efeitos</h2>
+            <p class="subtitulo">
+                Colete moedas, desvie dos inimigos e ouça os efeitos sonoros!
+            </p>
+        </header>
+
+        <section class="painel">
+            <div class="indicador indicador-pontos">
+                <span class="icone">🪙</span>
+                <span class="rotulo">PONTOS</span>
+                <span id="placar" class="valor">0</span>
+            </div>
+
+            <div class="indicador indicador-vidas">
+                <span class="icone">❤️</span>
+                <span class="rotulo">VIDAS</span>
+                <span id="vidas" class="valor">3</span>
+            </div>
+
+            <div class="indicador indicador-tempo">
+                <span class="icone">⏱️</span>
+                <span class="rotulo">TEMPO</span>
+                <span class="valor">
+                    <span id="tempo">60</span>s
+                </span>
+            </div>
+
+            <div class="indicador indicador-fase">
+                <span class="icone">🎮</span>
+                <span class="rotulo">FASE</span>
+                <span id="fase" class="valor">1</span>
+            </div>
+        </section>
+
+        <p id="mensagem">
+            Use as setas para começar a missão!
+        </p>
+
+        <section class="painel-jogo">
+            <div class="titulo-cenario">
+                <span>🌌 SETOR GALÁCTICO</span>
+                <span>STATUS: ATIVO</span>
+            </div>
+
+            <div id="jogo">
+                <div class="estrela estrela-1">✦</div>
+                <div class="estrela estrela-2">·</div>
+                <div class="estrela estrela-3">✧</div>
+                <div class="estrela estrela-4">·</div>
+                <div class="estrela estrela-5">✦</div>
+
+                <div id="jogador">🧑‍🚀</div>
+                <div id="moeda">🪙</div>
+                <div id="inimigo">👾</div>
+            </div>
+        </section>
+
+        <footer class="rodape">
+            <p>CONTROLES</p>
+
+            <div class="teclas">
+                <span>↑</span>
+                <span>←</span>
+                <span>↓</span>
+                <span>→</span>
+            </div>
+
+            <p>Use as setas do teclado para pilotar o astronauta.</p>
+        </footer>
+
+        <!-- Efeitos sonoros -->
+        <audio id="somMoeda"
+               src="sons/moeda.wav"
+               preload="auto"></audio>
+
+        <audio id="somColisao"
+               src="sons/colisao.wav"
+               preload="auto"></audio>
+    </main>
+
+    <script type="py" src="jogo.py"></script>
+</body>
+</html>
